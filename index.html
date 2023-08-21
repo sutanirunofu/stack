@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+    <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
+    <link rel="stylesheet" href="./styles/zero.css">
+    <link rel="stylesheet" href="./styles/loader.css">
+    <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/game.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+    <audio loop>
+        <source src="./media/music1.mp3" type="audio/mp3">
+        <source src="./media/music2.mp3" type="audio/mp3">
+        <source src="./media/music3.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="wrapper" id="wrapper">
+        <div class="shadow"></div>
+        <div class="container" id="menu">
+            <div class="title">
+                <h1>Stack</h1>
+                <p>Score <span id="score">0</span></p>
+            </div>
+            <div class="main">
+                <div class="bgimage"></div>
+            </div>
+            <div class="menu">
+                <button id="playButton" class="play bgimage"></button>
+                <button id="toggleSoundButton" class="toggleSound active bgimage"></button>
+            </div> 
+        </div> 
+        <div class="container game hide" id="game">
+            <div class="score">
+                <h1 id="points">0</h1>
+                <h3>Score <span id="score">0</span></h3>
+            </div>
+            <div class="map">
+                <div class="stack" id="stack">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader" id="loader"></div>
+</body>
+</html>

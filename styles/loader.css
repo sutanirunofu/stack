@@ -1,0 +1,17 @@
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 110%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.8s ease;
+    z-index: 999;
+}
+
+.loader.active {
+    transform: translate(-50%, -50%) scale(1.2);
+}

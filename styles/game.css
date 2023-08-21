@@ -1,0 +1,156 @@
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    width: 100%;
+    height: fit-content;
+}
+
+.score>h1, .score>h3 {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.score>h1 {
+    font-size: 6em;
+}
+
+.score>h3 {
+    font-size: 2em;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.stack {
+    position: relative;
+    width: 400px;
+    height: 100%;
+    transform: rotateX(45deg);
+    transition: all 1s ease-in-out;
+}
+
+.stack.back {
+    transform: rotateX(45deg) scale(0.1);
+    margin-top: -200px;
+}
+
+.shadow {
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 400px;
+    box-shadow: 0 0 160px 10px #000000;
+}
+
+.block {
+    position: absolute;
+    left: 50%;
+    transform: rotateZ(-45deg) translateX(-75%);
+    width: fit-content;
+    height: fit-content;
+    animation: moveByY 6s linear infinite;
+}
+
+.block.super::before,
+.block.super::after {
+    content: "";
+    position: absolute;
+    margin-left: -160px;
+    margin-top: 190px;
+    transform: scale(0);
+    width: 600px;
+    height: 600px;
+    opacity: 1;
+    background-color: #ffffff;
+    animation: super 1.4s ease-in-out;
+}
+
+.block.super::after {
+    margin-left: -130px;
+    margin-top: 160px;
+}
+
+.block.isDirectionByX {
+    animation: moveByX 6s linear infinite;   
+}
+
+.block.disable {
+    animation: none;
+}
+
+.top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+}
+
+.block.back > .top {
+    left: 0;
+    bottom: 0;
+}
+
+.left, .right {
+    position: absolute;
+    left: -20px;
+    bottom: -40px;
+    transform: skewX(-45deg);
+    width: 100%;
+    height: 40px;
+}
+
+.left {
+    width: 40px;
+    left: -40px;
+    bottom: -20px;
+    height: 100%;
+    transform: skewY(-45deg);
+}
+
+@keyframes moveByX {
+    0%, 100% {
+        margin-left: 300px;
+        margin-bottom: 300px;
+    }
+
+    50% {
+        margin-left: -300px;
+        margin-bottom: -300px;
+    }
+}
+
+@keyframes moveByY {
+    0%, 100% {
+        margin-left: -300px;
+        margin-bottom: 300px;
+    }
+
+    50% {
+        margin-left: 300px;
+        margin-bottom: -300px;
+    }
+}
+
+@keyframes super {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}

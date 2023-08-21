@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    font-family: monospace;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bgimage {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
