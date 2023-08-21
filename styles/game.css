@@ -154,3 +154,14 @@
         opacity: 0;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .stack {
+        transform: rotateX(45deg) scale(0.6);
+    }
+
+    .stack.back {
+        transform: rotateX(45deg) scale(0.1);
+        margin-top: -200px;
+    }
+}
